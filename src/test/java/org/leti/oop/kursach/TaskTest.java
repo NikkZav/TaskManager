@@ -55,5 +55,4 @@ public class TaskTest {
         assertEquals(expectedString, task.toString());
     }
 
-    int test = 0;
 }
