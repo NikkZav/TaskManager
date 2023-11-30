@@ -54,4 +54,6 @@ public class TaskTest {
                 "                   | deadline: null | completness: 0 | notice: false | rating: 3 }  \n     ";
         assertEquals(expectedString, task.toString());
     }
+
+    int test = 0;
 }
