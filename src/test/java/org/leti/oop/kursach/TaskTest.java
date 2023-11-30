@@ -55,4 +55,5 @@ public class TaskTest {
         assertEquals(expectedString, task.toString());
     }
 
+    String wow = "Wow!";
 }
