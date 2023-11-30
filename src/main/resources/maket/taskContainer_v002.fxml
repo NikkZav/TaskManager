@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="taskContainer" layoutX="4.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="890.0" style="-fx-background-color: #FCE38A; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-width: 2;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.leti.oop.kursach.TaskContainerController">
+   <children>
+      <Separator layoutX="146.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Separator>
+      <Separator layoutX="565.0" layoutY="1.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="7.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="317.79999999999995" AnchorPane.topAnchor="1.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Separator>
+      <TextArea fx:id="noteTask" layoutX="151.2" promptText="Опишите здесь свою задачу" style="-fx-background-color: transparent; -fx-control-inner-background: #FDFFAB;" wrapText="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <DatePicker fx:id="dataField" layoutX="574.0" layoutY="4.0" prefHeight="26.0" prefWidth="119.0" promptText="дата дедлайна" showWeekNumbers="true" AnchorPane.rightAnchor="196.79999999999995" AnchorPane.topAnchor="4.0" />
+      <CheckBox fx:id="buttonTime" layoutX="709.0" layoutY="8.0" mnemonicParsing="false" prefWidth="119.0" text="Время дедлайна" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="8.0" />
+      <Pane layoutX="573.0" layoutY="35.0" prefHeight="18.0" prefWidth="241.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 33;" AnchorPane.rightAnchor="76.59999999999991" AnchorPane.topAnchor="35.0" />
+      <ImageView fx:id="star1" fitHeight="20.0" fitWidth="20.0" layoutX="711.0" layoutY="33.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="34.0">
+         <image>
+            <Image url="@../icons/icon_star.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="star2" fitHeight="20.0" fitWidth="20.0" layoutX="731.0" layoutY="33.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="34.0">
+         <image>
+            <Image url="@../icons/icon_star.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="star3" fitHeight="20.0" fitWidth="20.0" layoutX="751.0" layoutY="33.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="34.0">
+         <image>
+            <Image url="@../icons/icon_star.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="star4" fitHeight="20.0" fitWidth="20.0" layoutX="771.0" layoutY="33.0" visible="false" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="34.0">
+         <image>
+            <Image url="@../icons/icon_star.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="star5" fitHeight="20.0" fitWidth="20.0" layoutX="791.0" layoutY="33.0" visible="false" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="34.0">
+         <image>
+            <Image url="@../icons/icon_star.png" />
+         </image>
+      </ImageView>
+      <Text disable="true" layoutX="579.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приоритет задачи:" AnchorPane.rightAnchor="181.595703125" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="completnessBar" layoutX="576.0" layoutY="77.0" prefHeight="23.0" prefWidth="270.0" progress="0.0" style="-fx-accent: #A1DE93;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="41.0" />
+      <Slider fx:id="completnessSlider" layoutX="572.0" layoutY="62.0" prefHeight="38.0" prefWidth="277.0" showTickLabels="true" showTickMarks="true" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="41.0" />
+      <ChoiceBox fx:id="list_of_stars" layoutX="816.0" layoutY="34.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="32.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="33.0" />
+      <Button fx:id="openTask_button" ellipsisString="" layoutX="151.2" layoutY="43.2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.75" prefHeight="18.0" prefWidth="7.0" style="-fx-background-color: #FAB900; -fx-background-radius: 10; -fx-border-color: #000000; -fx-border-radius: 10; -fx-border-width: 0.5;" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="39.0">
+         <graphic>
+            <ImageView fitHeight="11.0" fitWidth="11.0" rotate="90.0">
+               <image>
+                  <Image url="@../icons/icon_triangle.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="openSettings_button" ellipsisString="" layoutX="856.0" layoutY="35.2" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="32.0" style="-fx-background-color: #adbfd2; -fx-background-radius: 22; -fx-border-radius: 22; -fx-border-color: #000000; -fx-border-width: 0.5;" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="35.0">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../icons/icon_parm2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="notice_CheckBox" layoutX="832.0" layoutY="8.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="7.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="8.0" />
+      <ImageView fx:id="notice_img" fitHeight="18.0" fitWidth="18.0" layoutX="857.0" layoutY="8.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="9.0">
+         <image>
+            <Image url="@../icons/icon_notice2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="nameTask" layoutX="26.0" layoutY="8.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="110.0" style="-fx-background-color: transparent;" text="Название" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0" />
+         </padding>
+      </Button>
+      <TextField fx:id="nameTask_textField" alignment="CENTER" layoutX="27.2" layoutY="34.4" prefHeight="34.0" prefWidth="115.0" promptText="Название" style="-fx-background-color: #FDFFAB; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30; -fx-prompt-text-fill: #BDAF7D; -fx-border-width: 0.5;" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="-1.0" left="5.0" top="-1.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow height="44.0" radius="21.5" width="44.0">
+               <color>
+                  <Color red="0.5600000023841858" green="0.29474666714668274" blue="0.01119999960064888" opacity="0.4050152003765106" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Pane fx:id="grayPane" opacity="0.67" prefHeight="100.0" prefWidth="881.0" style="-fx-background-color: #6d7781; -fx-background-radius: 40;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <CheckBox fx:id="didTask_button" layoutX="8.0" layoutY="38.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-padding: 5 5 6 6;" AnchorPane.bottomAnchor="37.199999999999996" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="38.0" />
+   </children>
+</AnchorPane>

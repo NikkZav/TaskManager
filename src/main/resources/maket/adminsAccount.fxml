@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: FFFBE0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.leti.oop.kursach.MainWindowController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #474744;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="userName_label" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="21.0" prefHeight="54.0" prefWidth="126.0" style="-fx-background-color: #616161; -fx-background-radius: 5;" text="Пользователь:&#10;Антон" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="exit_batton" layoutX="802.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #E67A7A;" text="Выйти из&#10;аккаунта" textFill="WHITE" AnchorPane.rightAnchor="14.799999999999955">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="createTask_button" layoutX="170.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #A1DE93; -fx-background-radius: 10;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView cache="true" fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../icons/icon_create2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="deleteTask_button" layoutX="240.0" layoutY="22.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: #A1DE93; -fx-background-radius: 10;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView cache="true" fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../icons/icon_delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="editTask_button" layoutX="310.0" layoutY="22.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: #A1DE93; -fx-background-radius: 10;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView cache="true" fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../icons/icon_edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="searchTask_button" layoutX="380.0" layoutY="22.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: #A1DE93; -fx-background-radius: 10;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView cache="true" fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../icons/icon_search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="sortTask_button" layoutX="450.0" layoutY="22.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: #A1DE93; -fx-background-radius: 10;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView cache="true" fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../icons/icon_sort.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="1.0" layoutY="100.0" prefHeight="499.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView layoutX="43.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
